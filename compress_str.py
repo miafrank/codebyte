@@ -5,29 +5,25 @@
 
 
 def compressed_str(input_str):
-    # Create list of individual characters
+    # Create list of individual numbers
     str_list = list(input_str)
     count = 1
     result = []
 
-    # iterate through list of characters from 0 to len(list) - 1
+    # Iterate through list of characters from 0 to len(list) - 1
     for i in range(len(str_list) - 1):
-        # if index of current item in list is not equal to the length of the list
+        # If index of current item in list is not equal to the length of the list
         if i != len(str_list):
             # If next string in list is the same number as current item/index, increase the count by 1
             if str_list[i] == str_list[i + 1]:
                 count += 1
             # If next str in list not equal to current item -> add count and char to list and reset count
-            # Add to tuple
             if str_list[i] != str_list[i + 1]:
                 result.append((int(count), int(str_list[i])))
                 count = 1
                 # Account for last character in list
-                # Last index in the list is 6
-                # Len of list 7 - 1 == 6
             if int(i) + 1 == len(str_list) - 1:
                 result.append((int(count), int(str_list[i + 1])))
-
     return result
 
 
