@@ -9,7 +9,8 @@ def compressed_str(input_str):
     str_list = list(input_str)
     count = 1
     result = []
-
+    if len(str_list) == 1:
+        result.append((int(count), int(str_list[0])))
     # Iterate through list of characters from 0 to len(list) - 1
     for i in range(len(str_list) - 1):
         # If index of current item in list is not equal to the length of the list
