@@ -1,5 +1,4 @@
 # https://www.hackerrank.com/challenges/nested-list/problem
-no_students = 5
 students = []
 
 for _ in range(int(input())):
